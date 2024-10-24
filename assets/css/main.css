@@ -99,6 +99,13 @@ h6 {
   font-weight: 600;
 }
 
+.navbar-logo {
+  width: auto; /* Let the width adjust automatically if height is specified */
+  max-height: 60px; /* Adjust the max height according to your navbar size */
+  height: auto; /* Ensures the logo maintains its aspect ratio */
+}
+
+
 .php-email-form .sent-message {
   display: none;
   color: #ffffff;
@@ -142,7 +149,7 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
-.header {
+/* .header {
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 15px 0;
@@ -169,6 +176,51 @@ h6 {
 
 .header .logo h1 span {
   color: var(--accent-color);
+} */
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  height: 100px; /* Adjusted height for the navbar */
+  line-height: 100px; /* Aligns logo vertically */
+}
+
+.header .logo {
+  line-height: 1;
+  padding: 10px 20px; /* Adds padding around the logo */
+}
+
+.header .logo img {
+  max-height: 80px; /* Increased max-height to make the logo bigger */
+  height: auto; /* Ensures the aspect ratio is maintained */
+  width: auto;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .logo h1 span {
+  color: var(--accent-color);
+}
+
+/* Media query to adjust the logo size on smaller screens */
+@media (max-width: 768px) {
+  .header {
+    height: 80px; /* Reduce height for mobile view */
+    line-height: 80px; /* Adjust alignment */
+  }
+
+  .header .logo img {
+    max-height: 50px; /* Smaller logo for mobile screens */
+  }
 }
 
 /*--------------------------------------------------------------
